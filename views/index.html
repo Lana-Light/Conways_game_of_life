@@ -1,0 +1,49 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Welcome to Glitch!</title>
+    <meta name="description" content="Convey's game of life">
+    <link id="favicon" rel="icon" href="https://cdn.glitch.com/4f984192-c5e5-4fcd-b00b-cc913badfe04%2F4f984192-c5e5-4fcd-b00b-cc913badfe04%252Fthumbnails%252Fimage.png?1543003046948" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/main.css">
+    
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/runtime.js" defer></script>
+    <script src="/vendors.js" defer></script>
+    <script src="/main.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>
+        Convay's Game of life
+      </h1>
+    </header>
+
+    <main>
+      <div id="root"></div>
+    </main>
+
+    <footer>
+      Made with <a href="https://glitch.com">Glitch</a>!
+    </footer>
+
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>
+
+  </body>
+</html>
