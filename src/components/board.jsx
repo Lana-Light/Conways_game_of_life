@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 import Cell from "./cell.jsx";
 
-class Board extends React.PureComponent {
+class Board extends React.Component {
   constructor(props) {
     super(props);
   }

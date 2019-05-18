@@ -3,7 +3,8 @@ const startingConfig = {
   sideLength,
   generate: null,
   genCount: 0,
-  color: "black"
+  color: "black",
+  mode: "open"
 };
 const board = (state = startingConfig, action) => {
   if (action.type == "TOGGLE_GENERATE") {
@@ -18,6 +19,8 @@ const board = (state = startingConfig, action) => {
     return { ...state, genCount: 0, generate: null };
   } else if (action.type == "RESET_GAME") {
     return { ...state, genCount: 0, generate: null };
+  } else if (action.type == "SET_BOARD_MODE") {
+    return { ...state, mode: action.mode };
   } else {
     return state;
   }

@@ -28,12 +28,12 @@ class Controls extends React.Component {
   }
 
   generateOne() {
-    console.log(Object.keys(this.props.cells));
     if (this.props.generate == null) {
-      const newCells = createNextGeneration(
-        this.props.sideLength,
-        this.props.cells
-      );
+      const newCells = createNextGeneration({
+        mode: this.props.mode,
+        sideLength: this.props.sideLength,
+        cells: this.props.cells
+      });
       this.props.updateCells(newCells);
       this.props.updateGenCount();
     }
@@ -44,10 +44,11 @@ class Controls extends React.Component {
       this.props.toggleGenerate(null);
     } else {
       const timerId = setInterval(() => {
-        const newCells = createNextGeneration(
-          this.props.sideLength,
-          this.props.cells
-        );
+        const newCells = createNextGeneration({
+          mode: this.props.mode,
+          sideLength: this.props.sideLength,
+          cells: this.props.cells
+        });
         this.props.updateCells(newCells);
         this.props.updateGenCount();
       }, 500);
@@ -91,7 +92,8 @@ const mapStateToProps = (state /*, ownProps*/) => {
   return {
     generate: state.board.generate,
     sideLength: state.board.sideLength,
-    cells: state.cells.cells
+    cells: state.cells.cells,
+    mode: state.board.mode
   };
 };
 
